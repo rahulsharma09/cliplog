@@ -1,3 +1,4 @@
+
 # 📋 cliplog
 
 > Console.log that copies to clipboard automatically 🔥
@@ -16,87 +17,122 @@
 
 ## 📦 Installation
 
+Using **npm**:
+
 ```bash
 npm install cliplog
+```
 
-📖 How to Use
-Import the function:
-js
-Copy
-Edit
+Using **yarn**:
+
+```bash
+yarn add cliplog
+```
+
+Using **pnpm**:
+
+```bash
+pnpm add cliplog
+```
+
+---
+
+## 📖 How to Use
+
+### Import the function:
+
+```js
 import { clog } from 'cliplog';
-Use it like console.log, but better:
-js
-Copy
-Edit
+```
+
+### Use it like `console.log`, but better:
+
+```js
 clog('Hello world!');
 clog({ name: 'Alice', age: 25 });
-✅ Logs the data to the console
-✅ Copies it to your system clipboard
+```
+
+✅ Logs the data to the console  
+✅ Copies it to your system clipboard  
 ✅ Pretty prints objects
 
-📂 Example Output
-json
-Copy
-Edit
+---
+
+## 📂 Example Output
+
+```json
 {
   "name": "Alice",
   "age": 25
 }
-✅ Copied to clipboard!
+```
+
+✅ Copied to clipboard!  
 Now you can paste it anywhere — Notion, Slack, terminal, etc.
 
-📌 Why Use cliplog?
-Tired of copy-pasting your console logs manually?
-clog() automatically logs and copies the output so you don’t have to.
+---
+
+## 📌 Why Use cliplog?
+
+Tired of copy-pasting your console logs manually?  
+`clog()` automatically logs and copies the output so you don’t have to.
 
 Great for:
 
-Sharing debug info with teammates
+- Sharing debug info with teammates
+- Copying tokens or IDs quickly
+- Exporting formatted logs for docs
+- Rapid prototyping
 
-Copying tokens or IDs quickly
+---
 
-Exporting formatted logs for docs
+## 🔧 API
 
-Rapid prototyping
+### `clog(data: any)`
 
-🔧 API
-clog(data: any)
-data — The value to log (string, number, object, array, etc.)
+- **data** — The value to log (string, number, object, array, etc.)
 
 Automatically:
+- Logs to the console
+- Copies output to your system clipboard
+- Pretty-prints objects and arrays
 
-Logs to the console
+---
 
-Copies output to your system clipboard
+## 🧪 Try It Locally
 
-Pretty-prints objects and arrays
-
-🧪 Try It Locally
-bash
-Copy
-Edit
+```js
 import { clog } from 'cliplog';
 
 clog({ user: 'Bob', role: 'admin', token: 'abc123xyz' });
-✅ Output is logged and copied to your clipboard.
+```
 
-Paste it anywhere using Ctrl+V.
+✅ Output is logged and copied to your clipboard.  
+Paste it anywhere using `Ctrl+V`.
 
-🛠️ Works In:
-Node.js (preferably 14+)
+---
 
-ES Module (add "type": "module" to your package.json)
+## 🛠️ Works In
 
-Terminal environments
+- Node.js (preferably 14+)
+- ES Module environments (add `"type": "module"` to your `package.json`)
+- Terminal (CLI-based environments)
 
-🐛 Troubleshooting
-If clipboard copy fails, ensure your environment supports clipboardy
+---
 
-Works in Node.js (not browser)
+## 🐛 Troubleshooting
 
-📄 License
-MIT
+- If clipboard copy fails, ensure your environment supports `clipboardy`
+- This package only works in Node.js (not in the browser)
 
-🙌 Author
-Made with ❤️ by Rahul Sharma
+---
+
+## 📄 License
+
+[MIT](./LICENSE)
+
+---
+
+## 🙌 Author
+
+Made with ❤️ by Rahul Sharma(https://github.com/rahulsharma09)
