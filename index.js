@@ -1,20 +1,22 @@
-import clipboardy from "clipboardy";
-
 export function clog(data) {
-  let output;
+  const output =
+    typeof data === "object" ? JSON.stringify(data, null, 2) : String(data);
+  console.log(output);
 
   // Format output for objects
-  if (typeof data === "object") {
-    try {
-      output = JSON.stringify(data, null, 2);
-    } catch {
-      output = String(data);
+  try {
+    if (typeof window === "undefined") {
+      // Node.js
+      import("clipboardy").then(({ writeSync }) => writeSync(output));
+    } else if (navigator.clipboard) {
+      // Browser
+      navigator.clipboard.writeText(output);
+    } else {
+      console.warn("Clipboard not supported in this environment.");
     }
-  } else {
-    output = String(data);
+  } catch (e) {
+    console.warn("Failed to copy to clipboard:", e.message);
   }
-
-  console.log(output);
 
   // Copy to clipboard
 
