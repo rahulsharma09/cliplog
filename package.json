@@ -26,5 +26,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rahulsharma09/cliplog.git"
+  },
+  "homepage": "https://github.com/rahulsharma09/cliplog.git#readme",
+  "exports": {
+    ".": "./index.js"
   }
 }
