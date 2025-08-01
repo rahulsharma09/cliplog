@@ -10,7 +10,7 @@ export function clog(data) {
     if (typeof window === "undefined") {
       // Node.js
       clipboard.writeSync(output);
-    } else if (navigator.clipboard) {
+    } else if (navigator.clipboard && document.hasFocus()) {
       // Browser
       navigator.clipboard.writeText(output);
     } else {
