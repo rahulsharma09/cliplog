@@ -22,6 +22,6 @@ export function clog(data) {
     clipboardy.writeSync(output);
     console.log("✅ Copied to clipboard");
   } catch (error) {
-    console.error("❌ Failed to copy to clipboard:", err.message);
+    console.error("❌ Failed to copy to clipboard:", error.message);
   }
 }
