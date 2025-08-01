@@ -19,13 +19,4 @@ export function clog(data) {
   } catch (e) {
     console.warn("Failed to copy to clipboard:", e.message);
   }
-
-  // Copy to clipboard
-
-  try {
-    clipboardy.writeSync(output);
-    console.log("✅ Copied to clipboard");
-  } catch (error) {
-    console.error("❌ Failed to copy to clipboard:", error.message);
-  }
 }
