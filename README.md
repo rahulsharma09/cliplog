@@ -6,12 +6,3 @@
 
 ```bash
 npm install cliplog
-
-🔧 Features
-📋 Automatically copies console output
-
-🧼 Auto-formats objects as readable JSON
-
-🐛 Great for debugging, prototyping, and sharing
-
-💡 Works with strings, objects, arrays, numbers
