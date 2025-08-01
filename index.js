@@ -1,3 +1,5 @@
+import clipboard from "clipboardy";
+
 export function clog(data) {
   const output =
     typeof data === "object" ? JSON.stringify(data, null, 2) : String(data);
@@ -7,7 +9,7 @@ export function clog(data) {
   try {
     if (typeof window === "undefined") {
       // Node.js
-      import("clipboardy").then(({ writeSync }) => writeSync(output));
+      clipboard.writeSync(output);
     } else if (navigator.clipboard) {
       // Browser
       navigator.clipboard.writeText(output);
