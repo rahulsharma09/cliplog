@@ -19,7 +19,7 @@
     "debug"
   ],
   "author": "Rahul Sharma",
-  "license": "ISC",
+  "license": "MIT",
   "description": "A CLI tool to log your clips",
   "dependencies": {
     "clipboardy": "^4.0.0"

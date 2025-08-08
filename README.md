@@ -123,7 +123,6 @@ Paste it anywhere using `Ctrl+V`.
 ## 🐛 Troubleshooting
 
 - If clipboard copy fails, ensure your environment supports `clipboardy`
-- This package only works in Node.js (not in the browser)
 
 ---
 
