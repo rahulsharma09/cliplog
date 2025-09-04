@@ -1,7 +1,7 @@
 {
   "name": "cliplog",
   "version": "1.0.13",
-  "main": "index.js",
+  "main": "index.cjs",
   "type": "module",
   "types": "./index.d.ts",
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/rahulsharma09/cliplog.git#readme",
   "exports": {
-    "require": "./index.js",
+    "require": "./index.cjs",
     "import": "./index.mjs"
   }
 }
