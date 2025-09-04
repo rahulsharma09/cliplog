@@ -1,17 +1,14 @@
-const clipboard = require("clipboardy");
+import clipboard from "clipboardy";
 
 function clog(data) {
   const output =
     typeof data === "object" ? JSON.stringify(data, null, 2) : String(data);
   console.log(output);
 
-  // Format output for objects
   try {
     if (typeof window === "undefined") {
-      // Node.js
       clipboard.writeSync(output);
     } else if (navigator.clipboard && document.hasFocus()) {
-      // Browser
       navigator.clipboard.writeText(output);
     } else {
       console.warn("Clipboard not supported in this environment.");
@@ -21,5 +18,4 @@ function clog(data) {
   }
 }
 
-export {clog};
-module.exports = {clog};
+export { clog };

@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/rahulsharma09/cliplog.git#readme",
   "exports": {
-    ".": "./index.js"
+    "require": "./index.js",
+    "import": "./index.mjs"
   }
 }

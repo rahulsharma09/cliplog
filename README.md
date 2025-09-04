@@ -38,16 +38,20 @@ pnpm add cliplog
 ---
 
 ## 📖 How to Use
-
-### Import the function:
+### In ES Modules
 
 ```js
 import { clog } from 'cliplog';
+
+clog('Hello world!');
+clog({ name: 'Alice', age: 25 });
 ```
 
-### Use it like `console.log`, but better:
+### In CommonJS Modules
 
 ```js
+const { clog } = require('cliplog');
+
 clog('Hello world!');
 clog({ name: 'Alice', age: 25 });
 ```
@@ -102,7 +106,11 @@ Automatically:
 ## 🧪 Try It Locally
 
 ```js
+// ES Module
 import { clog } from 'cliplog';
+
+// CommonJS
+const { clog } = require('cliplog');
 
 clog({ user: 'Bob', role: 'admin', token: 'abc123xyz' });
 ```
@@ -134,4 +142,4 @@ Paste it anywhere using `Ctrl+V`.
 
 ## 🙌 Author
 
-Made with ❤️ by Rahul Sharma(https://github.com/rahulsharma09)
+Made with ❤️ by Rahul Sharma(https://rahulsharma.site/)
