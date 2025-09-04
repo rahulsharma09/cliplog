@@ -21,5 +21,4 @@ function clog(data) {
   }
 }
 
-export {clog};
 module.exports = {clog};
