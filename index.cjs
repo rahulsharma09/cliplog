@@ -8,7 +8,7 @@ async function clog(data) {
   try {
     if (typeof window === "undefined") {
       // Node.js
-      clipboard.writeSync(output);
+      await clipboard.default.write(output);
     } else if (navigator.clipboard && document.hasFocus()) {
       // Browser
       navigator.clipboard.writeText(output);
