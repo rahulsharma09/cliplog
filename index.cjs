@@ -1,6 +1,5 @@
-const clipboard = require("clipboardy");
-
-function clog(data) {
+async function clog(data) {
+  const clipboard = await import('clipboardy');
   const output =
     typeof data === "object" ? JSON.stringify(data, null, 2) : String(data);
   console.log(output);

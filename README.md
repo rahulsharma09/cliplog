@@ -52,8 +52,16 @@ clog({ name: 'Alice', age: 25 });
 ```js
 const { clog } = require('cliplog');
 
-clog('Hello world!');
-clog({ name: 'Alice', age: 25 });
+// Use async/await
+(async () => {
+  await clog('Hello world!');
+  await clog({ name: 'Alice', age: 25 });
+})();
+
+// Or use .then()
+clog('Hello world!').then(() => {
+  // Copied!
+});
 ```
 
 ✅ Logs the data to the console  
@@ -112,7 +120,16 @@ import { clog } from 'cliplog';
 // CommonJS
 const { clog } = require('cliplog');
 
-clog({ user: 'Bob', role: 'admin', token: 'abc123xyz' });
+// Use async/await
+(async () => {
+  await clog('Hello world!');
+  await clog({ name: 'Alice', age: 25 });
+})();
+
+// Or use .then()
+clog('Hello world!').then(() => {
+  // Copied!
+});
 ```
 
 ✅ Output is logged and copied to your clipboard.  
