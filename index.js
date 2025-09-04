@@ -1,6 +1,6 @@
 import clipboard from "clipboardy";
 
-export function clog(data) {
+function clog(data) {
   const output =
     typeof data === "object" ? JSON.stringify(data, null, 2) : String(data);
   console.log(output);
@@ -20,3 +20,6 @@ export function clog(data) {
     console.warn("Failed to copy to clipboard:", e.message);
   }
 }
+
+export {clog};
+module.exports = {clog};
